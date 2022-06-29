@@ -1,0 +1,37 @@
+body{
+    margin:0px;
+    background-image:url("./image/background.jfif");
+    background-repeat:no-repeat;
+    background-size: cover;
+    font-family: "Rajdhani", sans-serif;
+}
+.container{
+    background-color:white;
+    border-top:10px solid blanchedalmond;
+    border-bottom:10px solid blanchedalmond;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    max-width:800px;
+    min-height:100vh;
+}
+.tasks-area{
+    border:1px solid lightgrey;
+    margin-top: 1em;
+    position:relative;
+}
+.taps{
+    border-bottom:1px solid lightgrey;
+    display:flex;
+}
+.taps div{
+    margin:1em;
+}
+/* .task-board{
+    display:flex;
+    justify-content: space-between;
+    margin:1em;
+} */
+.task{
+    display:flex;
+    justify-content: space-between;
+    margin:1em;
+}
