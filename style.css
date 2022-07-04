@@ -35,3 +35,6 @@ body{
     justify-content: space-between;
     margin:1em;
 }
+.task-done{
+    text-decoration: line-through;
+}
