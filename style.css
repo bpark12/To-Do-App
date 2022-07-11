@@ -12,29 +12,68 @@ body{
     box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
     max-width:800px;
     min-height:100vh;
+    height:100%;
 }
 .tasks-area{
     border:1px solid lightgrey;
     margin-top: 1em;
     position:relative;
 }
+.task-input {
+    transition: padding-top 0.2s ease, margin-top 0.2s ease;
+    width: 80%;
+    border: none;
+    border: 1px solid blanchedalmond;
+  }
+.add-button{
+    background-color: blanchedalmond;
+    box-shadow: rgb(0 0 0 / 2%) 0 1px 3px 0;
+    border:none;
+}
+.add-button:hover{
+    background-color:lightcoral;
+}
 .taps{
     border-bottom:1px solid lightgrey;
     display:flex;
 }
 .taps div{
-    margin:1em;
+    padding:1em;
+    cursor: pointer;
 }
-/* .task-board{
-    display:flex;
-    justify-content: space-between;
-    margin:1em;
-} */
 .task{
     display:flex;
     justify-content: space-between;
     margin:1em;
 }
+#tap-underline{
+    position:absolute;
+    top:52px;
+    left:0px;
+    background-color: pink;
+    height:4px;
+    width:50px;
+    transition:0.5s;
+    padding: 0px;
+}
+.button-box button {
+    height: 100%;
+    border: none;
+    width: 5em;
+    margin: 0;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.fa-check {
+    color: limegreen;
+}
+  
+.fa-trash {
+    color: red;
+}
 .task-done{
     text-decoration: line-through;
+    background-color: lightgray;
+    transition: 0.5s;
 }
