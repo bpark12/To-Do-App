@@ -92,39 +92,35 @@ function toggleComplete(id){
             break;
         }
     }
-    render();
+    filter();
 }
 
 function deleteTask(id){
     for(let i=0; i<taskList.length; i++){
         if(taskList[i].id==id){
-            taskList.splice([i],1);
+            taskList.splice(i,1);
             break;
         }
     }
-    render();
+    filter();
 }
 
 function filter(event){
-    mode=event.target.id;
     filterList = [];
     if(event){
+        mode=event.target.id;
         underLine.style.width=event.target.offsetWidth +"px";
         underLine.style.left=event.target.offsetLeft + "px" ;
-        console.log(event.target.offsetLeft);
         underLine.style.top=event.target.offsetTop+(event.target.offsetHeight-4) +"px";
     }
-    if(mode=="all"){
-        render();
-    }
-    else if(mode=="ongoing"){
+
+    if(mode=="ongoing"){
         for(let i=0; i<taskList.length; i++){
             if(taskList[i].isCompleted==false){
                 filterList.push(taskList[i])
                 
             }
         }
-        render();
     }
     else if(mode=="done"){
         for(let i=0; i<taskList.length; i++){
@@ -132,8 +128,8 @@ function filter(event){
                 filterList.push(taskList[i]) 
             }
         }
-        render();
     }
+    render();
 }
 function randomIDGenerate(){
     return '_' + Math.random().toString(36).substr(2, 9);
